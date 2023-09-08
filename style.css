@@ -1,0 +1,139 @@
+
+
+@font-face {
+    font-family: nec_apc3;
+    src: url(/Web437_NEC_APC3_8x16.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: nec_apc3;
+    image-rendering: pixelated;
+    -webkit-font-smoothing : none;
+    font-smooth: never;
+}
+
+body {
+    background-color: #1E1E1E;
+    color: #333;
+}
+
+a:visited, a:active { 
+    text-decoration: none; 
+    color: rgb(255, 255, 255); 
+}
+
+a:link {
+    color: rgb(255, 255, 255); 
+}
+
+header {
+    background: linear-gradient(100deg, #37b8c1, #c09bfc);
+    padding: 10px;
+}
+
+nav {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode:both
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+main {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode:both
+}
+
+main section {
+    background: linear-gradient(100deg, #37b8c1cb, #c09bfcc2);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+main h1, main h2 {
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+#projects ul {
+    list-style-position: inside;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#projects ul li a {
+    text-align: center;
+    text-decoration: none;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+#contact p a {
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    background: linear-gradient(100deg, #37b8c1, #c09bfc);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 600px) {
+    main section {
+        margin: 20px 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        scale: 0.9;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+     }
+}
