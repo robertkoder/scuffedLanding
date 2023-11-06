@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Robert's Void</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="nav-list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -38,6 +40,7 @@
     </main>
     <footer>
         <p>Source code for this website can be found <a href="https://github.com/robertkoder/scuffedLanding" target="_blank">here</a></p>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">Flashbang</button>
     </footer>
 </body>
 </html>

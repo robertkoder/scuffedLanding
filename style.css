@@ -1,4 +1,12 @@
+:root {
+    --background-color: #1E1E1E;
+    --text-color: #E0E0E0;
+}
 
+.light-mode {
+    --background-color: #ffffff;
+    --text-color: #333333;
+}
 
 @font-face {
     font-family: nec_apc3;
@@ -17,17 +25,17 @@ html, body {
 }
 
 body {
-    background-color: #1E1E1E;
+    background-color: var(--background-color);
     color: #333;
 }
 
 a:visited, a:active { 
     text-decoration: none; 
-    color: rgb(255, 255, 255); 
+    color: var(--text-color);
 }
 
 a:link {
-    color: rgb(255, 255, 255); 
+    color: var(--text-color);
 }
 
 header {
@@ -54,7 +62,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.1em;
     padding: 10px;
@@ -74,11 +82,11 @@ main section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 main h1, main h2 {
-    color: #ffffff;
+    color: var(--text-color);
     margin-top: 0px;
 }
 
@@ -99,31 +107,68 @@ ul li {
 }
 
 #contact p a {
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
 }
 
 footer {
     background: linear-gradient(100deg, #37b8c1, #c09bfc);
-    color: #ffffff;
+    color: var(--text-color);
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 footer p {
     margin: 0;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
 
 @media (max-width: 600px) {
-    main section {
-        margin: 20px 10px;
+    .menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      
+        top: 50px;
+        left: 0;
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ffffff;
     }
 }
 
